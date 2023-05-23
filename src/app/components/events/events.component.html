@@ -1,0 +1,8 @@
+<div class="class">
+  <p *ngIf="showMsg">Message is visible</p>
+  <button (click)="ShowMessage()">Click here</button>
+
+  <p class="visible-bg" (mouseenter)="MouseEnter()" (mouseleave)="MouseLeave()">
+    {{ text }}
+  </p>
+</div>

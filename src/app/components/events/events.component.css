@@ -1,0 +1,7 @@
+.visible-bg {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 80px
+}
