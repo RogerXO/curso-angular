@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class FirstComponentComponent {
   name: string = 'Jhon travolta';
-  age: number = 16
-  job: string = "Software Developer"
+  age: number = 16;
+  job: string = 'Software Developer';
+  testData = 'Testing more than one parent';
 }
