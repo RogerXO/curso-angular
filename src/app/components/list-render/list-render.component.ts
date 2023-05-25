@@ -8,30 +8,11 @@ import { Animal } from 'src/app/Animal';
   styleUrls: ['./list-render.component.css'],
 })
 export class ListRenderComponent {
-  constructor(private listService: ListService) {}
+  constructor(private listService: ListService) {
+    this.getAnimals();
+  }
 
-  animals: Animal[] = [
-    {
-      name: 'Belinha',
-      type: 'dog',
-      age: 4,
-    },
-    {
-      name: 'Kiara',
-      type: 'Dinossaur',
-      age: 3,
-    },
-    {
-      name: 'Globs',
-      type: 'sloth',
-      age: 7,
-    },
-    {
-      name: 'Bob',
-      type: 'Horse',
-      age: 2,
-    },
-  ];
+  animals: Animal[] = [];
 
   animalAge: string = '';
 
@@ -41,5 +22,9 @@ export class ListRenderComponent {
 
   removeAnimal(animal: Animal) {
     this.animals = this.listService.remove(this.animals, animal);
+  }
+
+  getAnimals(): void {
+    this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
 }
