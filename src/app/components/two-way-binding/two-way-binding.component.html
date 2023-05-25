@@ -1,0 +1,12 @@
+<div class="class">
+  <h2>{{ "two way data binding" | titlecase }}</h2>
+  <form>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      name="name"
+      placeholder="Enter a name"
+    />
+  </form>
+  <p *ngIf="name !== ''">The name is {{ name }}</p>
+</div>
